@@ -1,0 +1,21 @@
+{
+  "name": "botnetjs",
+  "version": "0.0.1",
+  "description": "A Javascript Implemention of a Botnet",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jay Looney <jay.m.looney@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "express-react-views": "^0.9.0",
+    "react": "^0.14.1",
+    "react-dom": "^0.14.1",
+    "socket.io": "^1.3.7"
+  }
+}
