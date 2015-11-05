@@ -1,4 +1,4 @@
-var socket = io()
+var socket = io();
 
 function evalAllBots() {
     var code = document.getElementsByName("evalme").value;

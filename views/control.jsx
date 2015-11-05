@@ -9,9 +9,10 @@ var ControlPanel = React.createClass({
                     <header>botnetjs C&amp;C</header>
                     <div class="controls">
                         <form onSubmit="evalAllBots()">
-                        <textarea name="evalme" value="Enter the code to eval here." />
+                        <label>Eval code on all bots</label>
+                        <textarea name="evalme" />
                         <input type="submit" value="Submit" />
-                        </form>                    
+                        </form>
                     </div>
                     <div class="connections_wrapper">
                         <div class="connections_box">
