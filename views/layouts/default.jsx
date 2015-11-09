@@ -6,7 +6,7 @@ var DefaultLayout = React.createClass({
                 <html>
                     <head><title>{this.props.title}</title></head>
                     <body>
-                        <div class="nav">
+                        <div className="nav">
                             <ul>
                                 <li><a href="">Home</a></li>
                                 <li><a href="/control">Control</a></li>

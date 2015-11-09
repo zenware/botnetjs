@@ -13,4 +13,4 @@ var HomePage = React.createClass({
     }
 })
 
-module.exports = HomePage 
+module.exports = HomePage

