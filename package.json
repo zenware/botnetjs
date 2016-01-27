@@ -4,18 +4,17 @@
   "description": "A Javascript Implemention of a Botnet",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jay Looney <jay.m.looney@gmail.com>",
   "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.0"
-  },
+  "repository": "git@github.com:zenware/botnetjs.git",
   "dependencies": {
     "express": "^4.13.3",
     "express-react-views": "^0.9.0",
-    "react": "^0.14.1",
-    "react-dom": "^0.14.1",
+    "react": "^0.14.2",
+    "react-dom": "^0.14.2",
     "socket.io": "^1.3.7"
   }
 }
